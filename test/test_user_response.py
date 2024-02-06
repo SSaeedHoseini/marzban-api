@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_response import UserResponse
+from marzban_api.models.user_response import UserResponse
 
 class TestUserResponse(unittest.TestCase):
     """UserResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestUserResponse(unittest.TestCase):
         model = UserResponse()
         if include_optional:
             return UserResponse(
-                proxies = marzban-api.models.proxies.Proxies(),
+                proxies = marzban_api.models.proxies.Proxies(),
                 expire = 56,
                 data_limit = 0.0,
                 data_limit_reset_strategy = 'no_reset',
@@ -67,7 +67,7 @@ class TestUserResponse(unittest.TestCase):
             )
         else:
             return UserResponse(
-                proxies = marzban-api.models.proxies.Proxies(),
+                proxies = marzban_api.models.proxies.Proxies(),
                 username = '',
                 status = 'active',
                 used_traffic = 56,

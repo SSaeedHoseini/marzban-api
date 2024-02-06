@@ -17,13 +17,13 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from typing import Dict, List
-from marzban-api.models.proxy_host import ProxyHost
-from marzban-api.models.proxy_inbound import ProxyInbound
-from marzban-api.models.system_stats import SystemStats
+from marzban_api.models.proxy_host import ProxyHost
+from marzban_api.models.proxy_inbound import ProxyInbound
+from marzban_api.models.system_stats import SystemStats
 
-from marzban-api.api_client import ApiClient, RequestSerialized
-from marzban-api.api_response import ApiResponse
-from marzban-api.rest import RESTResponseType
+from marzban_api.api_client import ApiClient, RequestSerialized
+from marzban_api.api_response import ApiResponse
+from marzban_api.rest import RESTResponseType
 
 
 class SystemApi:

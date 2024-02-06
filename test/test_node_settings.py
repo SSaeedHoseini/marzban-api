@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.node_settings import NodeSettings
+from marzban_api.models.node_settings import NodeSettings
 
 class TestNodeSettings(unittest.TestCase):
     """NodeSettings unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.proxy_types import ProxyTypes
+from marzban_api.models.proxy_types import ProxyTypes
 
 class TestProxyTypes(unittest.TestCase):
     """ProxyTypes unit test stubs"""

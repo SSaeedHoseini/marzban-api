@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_template_create import UserTemplateCreate
+from marzban_api.models.user_template_create import UserTemplateCreate
 
 class TestUserTemplateCreate(unittest.TestCase):
     """UserTemplateCreate unit test stubs"""

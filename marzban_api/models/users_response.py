@@ -17,23 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, StrictInt
 from typing import Any, ClassVar, Dict, List
-from marzban-api.models.port import Port
-from marzban-api.models.proxy_types import ProxyTypes
+from marzban_api.models.user_response import UserResponse
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ProxyInbound(BaseModel):
+class UsersResponse(BaseModel):
     """
-    ProxyInbound
+    UsersResponse
     """ # noqa: E501
-    tag: StrictStr
-    protocol: ProxyTypes
-    network: StrictStr
-    tls: StrictStr
-    port: Port
-    __properties: ClassVar[List[str]] = ["tag", "protocol", "network", "tls", "port"]
+    users: List[UserResponse]
+    total: StrictInt
+    __properties: ClassVar[List[str]] = ["users", "total"]
 
     model_config = {
         "populate_by_name": True,
@@ -53,7 +49,7 @@ class ProxyInbound(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ProxyInbound from a JSON string"""
+        """Create an instance of UsersResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,14 +70,18 @@ class ProxyInbound(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of port
-        if self.port:
-            _dict['port'] = self.port.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in users (list)
+        _items = []
+        if self.users:
+            for _item in self.users:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['users'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ProxyInbound from a dict"""
+        """Create an instance of UsersResponse from a dict"""
         if obj is None:
             return None
 
@@ -89,11 +89,8 @@ class ProxyInbound(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "tag": obj.get("tag"),
-            "protocol": obj.get("protocol"),
-            "network": obj.get("network"),
-            "tls": obj.get("tls"),
-            "port": Port.from_dict(obj["port"]) if obj.get("port") is not None else None
+            "users": [UserResponse.from_dict(_item) for _item in obj["users"]] if obj.get("users") is not None else None,
+            "total": obj.get("total")
         })
         return _obj
 

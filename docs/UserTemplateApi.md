@@ -1,4 +1,4 @@
-# marzban-api.UserTemplateApi
+# marzban_api.UserTemplateApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,15 +23,15 @@ Add a new user template  - **name** can be up to 64 characters - **data_limit** 
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_template_create import UserTemplateCreate
-from marzban-api.models.user_template_response import UserTemplateResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_template_create import UserTemplateCreate
+from marzban_api.models.user_template_response import UserTemplateResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -43,10 +43,10 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserTemplateApi(api_client)
-    user_template_create = marzban-api.UserTemplateCreate() # UserTemplateCreate | 
+    api_instance = marzban_api.UserTemplateApi(api_client)
+    user_template_create = marzban_api.UserTemplateCreate() # UserTemplateCreate | 
 
     try:
         # Add User Template
@@ -102,14 +102,14 @@ Get User Template information with id
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_template_response import UserTemplateResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_template_response import UserTemplateResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -121,9 +121,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserTemplateApi(api_client)
+    api_instance = marzban_api.UserTemplateApi(api_client)
     id = 56 # int | 
 
     try:
@@ -177,14 +177,14 @@ Get User Templates
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_template_response import UserTemplateResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_template_response import UserTemplateResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -196,9 +196,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserTemplateApi(api_client)
+    api_instance = marzban_api.UserTemplateApi(api_client)
     offset = 56 # int |  (optional)
     limit = 56 # int |  (optional)
 
@@ -255,15 +255,15 @@ Modify User Template  - **name** can be up to 64 characters - **data_limit** mus
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_template_modify import UserTemplateModify
-from marzban-api.models.user_template_response import UserTemplateResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_template_modify import UserTemplateModify
+from marzban_api.models.user_template_response import UserTemplateResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -275,11 +275,11 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserTemplateApi(api_client)
+    api_instance = marzban_api.UserTemplateApi(api_client)
     id = 56 # int | 
-    user_template_modify = marzban-api.UserTemplateModify() # UserTemplateModify | 
+    user_template_modify = marzban_api.UserTemplateModify() # UserTemplateModify | 
 
     try:
         # Modify User Template
@@ -335,13 +335,13 @@ Remove User Template
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -353,9 +353,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserTemplateApi(api_client)
+    api_instance = marzban_api.UserTemplateApi(api_client)
     id = 56 # int | 
 
     try:

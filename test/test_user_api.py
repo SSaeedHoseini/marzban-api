@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.user_api import UserApi
+from marzban_api.api.user_api import UserApi
 
 
 class TestUserApi(unittest.TestCase):

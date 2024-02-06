@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.core_api import CoreApi
+from marzban_api.api.core_api import CoreApi
 
 
 class TestCoreApi(unittest.TestCase):

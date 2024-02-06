@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.token import Token
+from marzban_api.models.token import Token
 
 class TestToken(unittest.TestCase):
     """Token unit test stubs"""

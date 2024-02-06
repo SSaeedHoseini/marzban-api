@@ -19,14 +19,14 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictInt, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from marzban-api.models.admin import Admin
-from marzban-api.models.admin_create import AdminCreate
-from marzban-api.models.admin_modify import AdminModify
-from marzban-api.models.token import Token
+from marzban_api.models.admin import Admin
+from marzban_api.models.admin_create import AdminCreate
+from marzban_api.models.admin_modify import AdminModify
+from marzban_api.models.token import Token
 
-from marzban-api.api_client import ApiClient, RequestSerialized
-from marzban-api.api_response import ApiResponse
-from marzban-api.rest import RESTResponseType
+from marzban_api.api_client import ApiClient, RequestSerialized
+from marzban_api.api_response import ApiResponse
+from marzban_api.rest import RESTResponseType
 
 
 class AdminApi:

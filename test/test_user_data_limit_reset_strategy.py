@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_data_limit_reset_strategy import UserDataLimitResetStrategy
+from marzban_api.models.user_data_limit_reset_strategy import UserDataLimitResetStrategy
 
 class TestUserDataLimitResetStrategy(unittest.TestCase):
     """UserDataLimitResetStrategy unit test stubs"""

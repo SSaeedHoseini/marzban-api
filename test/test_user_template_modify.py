@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_template_modify import UserTemplateModify
+from marzban_api.models.user_template_modify import UserTemplateModify
 
 class TestUserTemplateModify(unittest.TestCase):
     """UserTemplateModify unit test stubs"""

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.admin_modify import AdminModify
+from marzban_api.models.admin_modify import AdminModify
 
 # TODO update the JSON string below
 json = "{}"

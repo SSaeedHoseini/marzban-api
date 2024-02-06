@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.proxy_host_fingerprint import ProxyHostFingerprint
+from marzban_api.models.proxy_host_fingerprint import ProxyHostFingerprint
 
 class TestProxyHostFingerprint(unittest.TestCase):
     """ProxyHostFingerprint unit test stubs"""

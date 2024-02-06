@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.admin_api import AdminApi
+from marzban_api.api.admin_api import AdminApi
 
 
 class TestAdminApi(unittest.TestCase):

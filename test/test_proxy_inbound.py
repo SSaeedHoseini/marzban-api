@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.proxy_inbound import ProxyInbound
+from marzban_api.models.proxy_inbound import ProxyInbound
 
 class TestProxyInbound(unittest.TestCase):
     """ProxyInbound unit test stubs"""

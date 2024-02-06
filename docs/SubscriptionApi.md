@@ -1,4 +1,4 @@
-# marzban-api.SubscriptionApi
+# marzban_api.SubscriptionApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,22 +18,22 @@ User Subscription Info
 
 
 ```python
-import marzban-api
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SubscriptionApi(api_client)
+    api_instance = marzban_api.SubscriptionApi(api_client)
     token = 'token_example' # str | 
 
     try:
@@ -87,21 +87,21 @@ Subscription link, V2ray and Clash supported
 
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SubscriptionApi(api_client)
+    api_instance = marzban_api.SubscriptionApi(api_client)
     token = 'token_example' # str | 
     user_agent = '' # str |  (optional) (default to '')
 
@@ -157,21 +157,21 @@ Subscription link, v2ray, clash, sing-box, outline and clash-meta supported
 
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SubscriptionApi(api_client)
+    api_instance = marzban_api.SubscriptionApi(api_client)
     token = 'token_example' # str | 
     client_type = 'client_type_example' # str | 
 

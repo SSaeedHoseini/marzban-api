@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.nodes_usage_response import NodesUsageResponse
+from marzban_api.models.nodes_usage_response import NodesUsageResponse
 
 # TODO update the JSON string below
 json = "{}"

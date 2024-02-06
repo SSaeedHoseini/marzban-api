@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.node_create import NodeCreate
+from marzban_api.models.node_create import NodeCreate
 
 class TestNodeCreate(unittest.TestCase):
     """NodeCreate unit test stubs"""

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.location_inner import LocationInner
+from marzban_api.models.location_inner import LocationInner
 
 # TODO update the JSON string below
 json = "{}"

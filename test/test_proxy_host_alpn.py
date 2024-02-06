@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.proxy_host_alpn import ProxyHostALPN
+from marzban_api.models.proxy_host_alpn import ProxyHostALPN
 
 class TestProxyHostALPN(unittest.TestCase):
     """ProxyHostALPN unit test stubs"""

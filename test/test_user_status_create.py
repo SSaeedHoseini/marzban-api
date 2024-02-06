@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_status_create import UserStatusCreate
+from marzban_api.models.user_status_create import UserStatusCreate
 
 class TestUserStatusCreate(unittest.TestCase):
     """UserStatusCreate unit test stubs"""

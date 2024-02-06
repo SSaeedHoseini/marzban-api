@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_create import UserCreate
+from marzban_api.models.user_create import UserCreate
 
 class TestUserCreate(unittest.TestCase):
     """UserCreate unit test stubs"""
@@ -36,7 +36,7 @@ class TestUserCreate(unittest.TestCase):
         if include_optional:
             return UserCreate(
                 proxies = {
-                    'key' : marzban-api.models.proxy_settings.ProxySettings()
+                    'key' : marzban_api.models.proxy_settings.ProxySettings()
                     },
                 expire = 56,
                 data_limit = 0.0,

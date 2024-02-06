@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_modify import UserModify
+from marzban_api.models.user_modify import UserModify
 
 class TestUserModify(unittest.TestCase):
     """UserModify unit test stubs"""
@@ -36,7 +36,7 @@ class TestUserModify(unittest.TestCase):
         if include_optional:
             return UserModify(
                 proxies = {
-                    'key' : marzban-api.models.proxy_settings.ProxySettings()
+                    'key' : marzban_api.models.proxy_settings.ProxySettings()
                     },
                 expire = 56,
                 data_limit = 0.0,

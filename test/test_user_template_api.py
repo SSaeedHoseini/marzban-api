@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.user_template_api import UserTemplateApi
+from marzban_api.api.user_template_api import UserTemplateApi
 
 
 class TestUserTemplateApi(unittest.TestCase):

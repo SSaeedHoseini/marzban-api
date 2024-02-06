@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.default_api import DefaultApi
+from marzban_api.api.default_api import DefaultApi
 
 
 class TestDefaultApi(unittest.TestCase):

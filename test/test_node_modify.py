@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.node_modify import NodeModify
+from marzban_api.models.node_modify import NodeModify
 
 class TestNodeModify(unittest.TestCase):
     """NodeModify unit test stubs"""

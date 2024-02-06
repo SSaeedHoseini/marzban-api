@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.node_usage_response import NodeUsageResponse
+from marzban_api.models.node_usage_response import NodeUsageResponse
 
 # TODO update the JSON string below
 json = "{}"

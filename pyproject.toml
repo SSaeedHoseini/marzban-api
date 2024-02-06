@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "marzban-api"
+name = "marzban_api"
 version = "1.0.0"
 description = "MarzbanAPI"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
@@ -7,7 +7,7 @@ license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
 keywords = ["OpenAPI", "OpenAPI-Generator", "MarzbanAPI"]
-include = ["marzban-api/py.typed"]
+include = ["marzban_api/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -34,7 +34,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "marzban-api",
+  "marzban_api",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]

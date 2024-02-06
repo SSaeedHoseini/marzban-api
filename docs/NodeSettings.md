@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.node_settings import NodeSettings
+from marzban_api.models.node_settings import NodeSettings
 
 # TODO update the JSON string below
 json = "{}"

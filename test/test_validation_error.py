@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.validation_error import ValidationError
+from marzban_api.models.validation_error import ValidationError
 
 class TestValidationError(unittest.TestCase):
     """ValidationError unit test stubs"""

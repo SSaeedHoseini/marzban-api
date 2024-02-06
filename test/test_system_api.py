@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.system_api import SystemApi
+from marzban_api.api.system_api import SystemApi
 
 
 class TestSystemApi(unittest.TestCase):

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.core_stats import CoreStats
+from marzban_api.models.core_stats import CoreStats
 
 # TODO update the JSON string below
 json = "{}"

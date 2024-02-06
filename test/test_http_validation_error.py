@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.http_validation_error import HTTPValidationError
+from marzban_api.models.http_validation_error import HTTPValidationError
 
 class TestHTTPValidationError(unittest.TestCase):
     """HTTPValidationError unit test stubs"""
@@ -36,7 +36,7 @@ class TestHTTPValidationError(unittest.TestCase):
         if include_optional:
             return HTTPValidationError(
                 detail = [
-                    marzban-api.models.validation_error.ValidationError(
+                    marzban_api.models.validation_error.ValidationError(
                         loc = [
                             null
                             ], 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.node_usage_response import NodeUsageResponse
+from marzban_api.models.node_usage_response import NodeUsageResponse
 
 class TestNodeUsageResponse(unittest.TestCase):
     """NodeUsageResponse unit test stubs"""

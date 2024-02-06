@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from marzban-api.models.node_status import NodeStatus
+from marzban_api.models.node_status import NodeStatus
 from typing import Optional, Set
 from typing_extensions import Self
 

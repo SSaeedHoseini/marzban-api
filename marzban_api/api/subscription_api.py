@@ -19,11 +19,11 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from marzban-api.models.user_response import UserResponse
+from marzban_api.models.user_response import UserResponse
 
-from marzban-api.api_client import ApiClient, RequestSerialized
-from marzban-api.api_response import ApiResponse
-from marzban-api.rest import RESTResponseType
+from marzban_api.api_client import ApiClient, RequestSerialized
+from marzban_api.api_response import ApiResponse
+from marzban_api.rest import RESTResponseType
 
 
 class SubscriptionApi:

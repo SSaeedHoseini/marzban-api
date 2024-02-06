@@ -1,4 +1,4 @@
-# marzban-api.DefaultApi
+# marzban_api.DefaultApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,21 +16,21 @@ Base
 
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.DefaultApi(api_client)
+    api_instance = marzban_api.DefaultApi(api_client)
 
     try:
         # Base

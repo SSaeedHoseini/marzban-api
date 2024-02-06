@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: marzban-api Python package
+name: marzban_api Python package
 
 on: [push, pull_request]
 

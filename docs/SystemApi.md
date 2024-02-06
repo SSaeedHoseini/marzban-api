@@ -1,4 +1,4 @@
-# marzban-api.SystemApi
+# marzban_api.SystemApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,14 +20,14 @@ Get Hosts
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.proxy_host import ProxyHost
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.proxy_host import ProxyHost
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -39,9 +39,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SystemApi(api_client)
+    api_instance = marzban_api.SystemApi(api_client)
 
     try:
         # Get Hosts
@@ -89,14 +89,14 @@ Get Inbounds
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.proxy_inbound import ProxyInbound
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.proxy_inbound import ProxyInbound
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -108,9 +108,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SystemApi(api_client)
+    api_instance = marzban_api.SystemApi(api_client)
 
     try:
         # Get Inbounds
@@ -158,14 +158,14 @@ Get System Stats
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.system_stats import SystemStats
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.system_stats import SystemStats
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -177,9 +177,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SystemApi(api_client)
+    api_instance = marzban_api.SystemApi(api_client)
 
     try:
         # Get System Stats
@@ -227,14 +227,14 @@ Modify Hosts
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.proxy_host import ProxyHost
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.proxy_host import ProxyHost
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -246,9 +246,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.SystemApi(api_client)
+    api_instance = marzban_api.SystemApi(api_client)
     request_body = None # Dict[str, List[ProxyHost]] | 
 
     try:

@@ -1,4 +1,4 @@
-# marzban-api.CoreApi
+# marzban_api.CoreApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,13 +20,13 @@ Get Core Config
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -38,9 +38,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.CoreApi(api_client)
+    api_instance = marzban_api.CoreApi(api_client)
 
     try:
         # Get Core Config
@@ -89,14 +89,14 @@ Get Core Stats
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.core_stats import CoreStats
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.core_stats import CoreStats
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -108,9 +108,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.CoreApi(api_client)
+    api_instance = marzban_api.CoreApi(api_client)
 
     try:
         # Get Core Stats
@@ -158,13 +158,13 @@ Modify Core Config
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -176,9 +176,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.CoreApi(api_client)
+    api_instance = marzban_api.CoreApi(api_client)
     body = None # object | 
 
     try:
@@ -232,13 +232,13 @@ Restart Core
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -250,9 +250,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.CoreApi(api_client)
+    api_instance = marzban_api.CoreApi(api_client)
 
     try:
         # Restart Core

@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.user_usage_response import UserUsageResponse
+from marzban_api.models.user_usage_response import UserUsageResponse
 
 class TestUserUsageResponse(unittest.TestCase):
     """UserUsageResponse unit test stubs"""

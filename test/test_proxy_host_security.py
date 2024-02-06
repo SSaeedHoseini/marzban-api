@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.proxy_host_security import ProxyHostSecurity
+from marzban_api.models.proxy_host_security import ProxyHostSecurity
 
 class TestProxyHostSecurity(unittest.TestCase):
     """ProxyHostSecurity unit test stubs"""

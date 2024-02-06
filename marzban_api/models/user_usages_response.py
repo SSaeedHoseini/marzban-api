@@ -17,18 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
+from pydantic import BaseModel, StrictStr
 from typing import Any, ClassVar, Dict, List
-from marzban-api.models.node_usage_response import NodeUsageResponse
+from marzban_api.models.user_usage_response import UserUsageResponse
 from typing import Optional, Set
 from typing_extensions import Self
 
-class NodesUsageResponse(BaseModel):
+class UserUsagesResponse(BaseModel):
     """
-    NodesUsageResponse
+    UserUsagesResponse
     """ # noqa: E501
-    usages: List[NodeUsageResponse]
-    __properties: ClassVar[List[str]] = ["usages"]
+    username: StrictStr
+    usages: List[UserUsageResponse]
+    __properties: ClassVar[List[str]] = ["username", "usages"]
 
     model_config = {
         "populate_by_name": True,
@@ -48,7 +49,7 @@ class NodesUsageResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of NodesUsageResponse from a JSON string"""
+        """Create an instance of UserUsagesResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -80,7 +81,7 @@ class NodesUsageResponse(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of NodesUsageResponse from a dict"""
+        """Create an instance of UserUsagesResponse from a dict"""
         if obj is None:
             return None
 
@@ -88,7 +89,8 @@ class NodesUsageResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "usages": [NodeUsageResponse.from_dict(_item) for _item in obj["usages"]] if obj.get("usages") is not None else None
+            "username": obj.get("username"),
+            "usages": [UserUsageResponse.from_dict(_item) for _item in obj["usages"]] if obj.get("usages") is not None else None
         })
         return _obj
 

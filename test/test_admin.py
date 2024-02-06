@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.admin import Admin
+from marzban_api.models.admin import Admin
 
 class TestAdmin(unittest.TestCase):
     """Admin unit test stubs"""

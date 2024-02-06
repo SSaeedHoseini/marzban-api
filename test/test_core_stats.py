@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.core_stats import CoreStats
+from marzban_api.models.core_stats import CoreStats
 
 class TestCoreStats(unittest.TestCase):
     """CoreStats unit test stubs"""

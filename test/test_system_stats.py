@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.system_stats import SystemStats
+from marzban_api.models.system_stats import SystemStats
 
 class TestSystemStats(unittest.TestCase):
     """SystemStats unit test stubs"""

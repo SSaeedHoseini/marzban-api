@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.api.subscription_api import SubscriptionApi
+from marzban_api.api.subscription_api import SubscriptionApi
 
 
 class TestSubscriptionApi(unittest.TestCase):

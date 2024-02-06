@@ -23,7 +23,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import marzban-api
+import marzban_api
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import marzban-api
+import marzban_api
 ```
 
 ### Tests
@@ -50,13 +50,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -69,10 +69,10 @@ configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.AdminApi(api_client)
-    admin_create = marzban-api.AdminCreate() # AdminCreate | 
+    api_instance = marzban_api.AdminApi(api_client)
+    admin_create = marzban_api.AdminCreate() # AdminCreate | 
 
     try:
         # Create Admin

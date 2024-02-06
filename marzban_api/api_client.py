@@ -23,11 +23,11 @@ import tempfile
 from urllib.parse import quote
 from typing import Tuple, Optional, List, Dict
 
-from marzban-api.configuration import Configuration
-from marzban-api.api_response import ApiResponse, T as ApiResponseT
-import marzban-api.models
-from marzban-api import rest
-from marzban-api.exceptions import (
+from marzban_api.configuration import Configuration
+from marzban_api.api_response import ApiResponse, T as ApiResponseT
+import marzban_api.models
+from marzban_api import rest
+from marzban_api.exceptions import (
     ApiValueError,
     ApiException,
     BadRequestException,
@@ -419,7 +419,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(marzban-api.models, klass)
+                klass = getattr(marzban_api.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

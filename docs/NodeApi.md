@@ -1,4 +1,4 @@
-# marzban-api.NodeApi
+# marzban_api.NodeApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,15 +24,15 @@ Add Node
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.node_create import NodeCreate
-from marzban-api.models.node_response import NodeResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.node_create import NodeCreate
+from marzban_api.models.node_response import NodeResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -44,10 +44,10 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
-    node_create = marzban-api.NodeCreate() # NodeCreate | 
+    api_instance = marzban_api.NodeApi(api_client)
+    node_create = marzban_api.NodeCreate() # NodeCreate | 
 
     try:
         # Add Node
@@ -100,14 +100,14 @@ Get Node
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.node_response import NodeResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.node_response import NodeResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -119,9 +119,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
     node_id = 56 # int | 
 
     try:
@@ -176,14 +176,14 @@ Get Node
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.node_settings import NodeSettings
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.node_settings import NodeSettings
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -195,9 +195,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
 
     try:
         # Get Node
@@ -247,14 +247,14 @@ Get Nodes
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.node_response import NodeResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.node_response import NodeResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -266,9 +266,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
 
     try:
         # Get Nodes
@@ -319,14 +319,14 @@ Get nodes usage
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.nodes_usage_response import NodesUsageResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.nodes_usage_response import NodesUsageResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -338,9 +338,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
     start = 'start_example' # str |  (optional)
     end = 'end_example' # str |  (optional)
 
@@ -395,15 +395,15 @@ Modify Node
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.node_modify import NodeModify
-from marzban-api.models.node_response import NodeResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.node_modify import NodeModify
+from marzban_api.models.node_response import NodeResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -415,11 +415,11 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
     node_id = 56 # int | 
-    node_modify = marzban-api.NodeModify() # NodeModify | 
+    node_modify = marzban_api.NodeModify() # NodeModify | 
 
     try:
         # Modify Node
@@ -474,13 +474,13 @@ Reconnect Node
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -492,9 +492,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
     node_id = 56 # int | 
 
     try:
@@ -549,13 +549,13 @@ Remove Node
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -567,9 +567,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.NodeApi(api_client)
+    api_instance = marzban_api.NodeApi(api_client)
     node_id = 56 # int | 
 
     try:

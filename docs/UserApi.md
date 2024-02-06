@@ -1,4 +1,4 @@
-# marzban-api.UserApi
+# marzban_api.UserApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,15 +29,15 @@ Add a new user  - **username** must have 3 to 32 characters and is allowed to co
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_create import UserCreate
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_create import UserCreate
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -49,10 +49,10 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
-    user_create = marzban-api.UserCreate() # UserCreate | 
+    api_instance = marzban_api.UserApi(api_client)
+    user_create = marzban_api.UserCreate() # UserCreate | 
 
     try:
         # Add User
@@ -107,13 +107,13 @@ Delete expired users - **passed_time** must be a timestamp - This function will 
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -125,9 +125,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     passed_time = 56 # int | 
 
     try:
@@ -184,14 +184,14 @@ Get users information
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -203,9 +203,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -262,14 +262,14 @@ Get users usage
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_usages_response import UserUsagesResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_usages_response import UserUsagesResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -281,9 +281,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
     start = 'start_example' # str |  (optional)
     end = 'end_example' # str |  (optional)
@@ -344,15 +344,15 @@ Get all users
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_status import UserStatus
-from marzban-api.models.users_response import UsersResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_status import UserStatus
+from marzban_api.models.users_response import UsersResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -364,13 +364,13 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     offset = 56 # int |  (optional)
     limit = 56 # int |  (optional)
     username = 'username_example' # str |  (optional)
-    status = marzban-api.UserStatus() # UserStatus |  (optional)
+    status = marzban_api.UserStatus() # UserStatus |  (optional)
     sort = 'sort_example' # str |  (optional)
 
     try:
@@ -429,15 +429,15 @@ Modify a user  - set **expire** to 0 to make the user unlimited in time, null to
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_modify import UserModify
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_modify import UserModify
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -449,11 +449,11 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
-    user_modify = marzban-api.UserModify() # UserModify | 
+    user_modify = marzban_api.UserModify() # UserModify | 
 
     try:
         # Modify User
@@ -510,13 +510,13 @@ Remove a user
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -528,9 +528,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -587,14 +587,14 @@ Reset user data usage
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -606,9 +606,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -666,13 +666,13 @@ Reset all users data usage
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -684,9 +684,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
 
     try:
         # Reset Users Data Usage
@@ -737,14 +737,14 @@ Revoke users subscription (Subscription link and proxies)
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -756,9 +756,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -813,14 +813,14 @@ Set Owner
 * OAuth Authentication (OAuth2PasswordBearer):
 
 ```python
-import marzban-api
-from marzban-api.models.user_response import UserResponse
-from marzban-api.rest import ApiException
+import marzban_api
+from marzban_api.models.user_response import UserResponse
+from marzban_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = marzban-api.Configuration(
+configuration = marzban_api.Configuration(
     host = "http://localhost"
 )
 
@@ -832,9 +832,9 @@ configuration = marzban-api.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with marzban-api.ApiClient(configuration) as api_client:
+with marzban_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = marzban-api.UserApi(api_client)
+    api_instance = marzban_api.UserApi(api_client)
     username = 'username_example' # str | 
     admin_username = 'admin_username_example' # str | 
 

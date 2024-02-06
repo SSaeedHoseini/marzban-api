@@ -17,19 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictInt
+from pydantic import BaseModel
 from typing import Any, ClassVar, Dict, List
-from marzban-api.models.user_response import UserResponse
+from marzban_api.models.node_usage_response import NodeUsageResponse
 from typing import Optional, Set
 from typing_extensions import Self
 
-class UsersResponse(BaseModel):
+class NodesUsageResponse(BaseModel):
     """
-    UsersResponse
+    NodesUsageResponse
     """ # noqa: E501
-    users: List[UserResponse]
-    total: StrictInt
-    __properties: ClassVar[List[str]] = ["users", "total"]
+    usages: List[NodeUsageResponse]
+    __properties: ClassVar[List[str]] = ["usages"]
 
     model_config = {
         "populate_by_name": True,
@@ -49,7 +48,7 @@ class UsersResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of UsersResponse from a JSON string"""
+        """Create an instance of NodesUsageResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -70,18 +69,18 @@ class UsersResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in users (list)
+        # override the default output from pydantic by calling `to_dict()` of each item in usages (list)
         _items = []
-        if self.users:
-            for _item in self.users:
+        if self.usages:
+            for _item in self.usages:
                 if _item:
                     _items.append(_item.to_dict())
-            _dict['users'] = _items
+            _dict['usages'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of UsersResponse from a dict"""
+        """Create an instance of NodesUsageResponse from a dict"""
         if obj is None:
             return None
 
@@ -89,8 +88,7 @@ class UsersResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "users": [UserResponse.from_dict(_item) for _item in obj["users"]] if obj.get("users") is not None else None,
-            "total": obj.get("total")
+            "usages": [NodeUsageResponse.from_dict(_item) for _item in obj["usages"]] if obj.get("usages") is not None else None
         })
         return _obj
 

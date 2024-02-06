@@ -19,17 +19,18 @@ import json
 
 from pydantic import BaseModel, StrictStr
 from typing import Any, ClassVar, Dict, List
-from marzban-api.models.user_usage_response import UserUsageResponse
+from marzban_api.models.location_inner import LocationInner
 from typing import Optional, Set
 from typing_extensions import Self
 
-class UserUsagesResponse(BaseModel):
+class ValidationError(BaseModel):
     """
-    UserUsagesResponse
+    ValidationError
     """ # noqa: E501
-    username: StrictStr
-    usages: List[UserUsageResponse]
-    __properties: ClassVar[List[str]] = ["username", "usages"]
+    loc: List[LocationInner]
+    msg: StrictStr
+    type: StrictStr
+    __properties: ClassVar[List[str]] = ["loc", "msg", "type"]
 
     model_config = {
         "populate_by_name": True,
@@ -49,7 +50,7 @@ class UserUsagesResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of UserUsagesResponse from a JSON string"""
+        """Create an instance of ValidationError from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -70,18 +71,18 @@ class UserUsagesResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in usages (list)
+        # override the default output from pydantic by calling `to_dict()` of each item in loc (list)
         _items = []
-        if self.usages:
-            for _item in self.usages:
+        if self.loc:
+            for _item in self.loc:
                 if _item:
                     _items.append(_item.to_dict())
-            _dict['usages'] = _items
+            _dict['loc'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of UserUsagesResponse from a dict"""
+        """Create an instance of ValidationError from a dict"""
         if obj is None:
             return None
 
@@ -89,8 +90,9 @@ class UserUsagesResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "username": obj.get("username"),
-            "usages": [UserUsageResponse.from_dict(_item) for _item in obj["usages"]] if obj.get("usages") is not None else None
+            "loc": [LocationInner.from_dict(_item) for _item in obj["loc"]] if obj.get("loc") is not None else None,
+            "msg": obj.get("msg"),
+            "type": obj.get("type")
         })
         return _obj
 

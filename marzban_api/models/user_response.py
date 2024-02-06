@@ -21,16 +21,16 @@ from datetime import datetime
 from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from marzban-api.models.user_data_limit_reset_strategy import UserDataLimitResetStrategy
-from marzban-api.models.user_status_create import UserStatusCreate
+from marzban_api.models.user_data_limit_reset_strategy import UserDataLimitResetStrategy
+from marzban_api.models.user_status import UserStatus
 from typing import Optional, Set
 from typing_extensions import Self
 
-class UserCreate(BaseModel):
+class UserResponse(BaseModel):
     """
-    UserCreate
+    UserResponse
     """ # noqa: E501
-    proxies: Optional[Dict[str, Dict[str, Any]]] = None
+    proxies: Dict[str, Any]
     expire: Optional[StrictInt] = None
     data_limit: Optional[Annotated[int, Field(strict=True, ge=0)]] = Field(default=None, description="data_limit can be 0 or greater")
     data_limit_reset_strategy: Optional[UserDataLimitResetStrategy] = None
@@ -42,8 +42,14 @@ class UserCreate(BaseModel):
     on_hold_expire_duration: Optional[StrictInt] = None
     on_hold_timeout: Optional[datetime] = None
     username: StrictStr
-    status: Optional[UserStatusCreate] = None
-    __properties: ClassVar[List[str]] = ["proxies", "expire", "data_limit", "data_limit_reset_strategy", "inbounds", "note", "sub_updated_at", "sub_last_user_agent", "online_at", "on_hold_expire_duration", "on_hold_timeout", "username", "status"]
+    status: UserStatus
+    used_traffic: StrictInt
+    lifetime_used_traffic: Optional[StrictInt] = 0
+    created_at: datetime
+    links: Optional[List[StrictStr]] = None
+    subscription_url: Optional[StrictStr] = ''
+    excluded_inbounds: Optional[Dict[str, List[StrictStr]]] = None
+    __properties: ClassVar[List[str]] = ["proxies", "expire", "data_limit", "data_limit_reset_strategy", "inbounds", "note", "sub_updated_at", "sub_last_user_agent", "online_at", "on_hold_expire_duration", "on_hold_timeout", "username", "status", "used_traffic", "lifetime_used_traffic", "created_at", "links", "subscription_url", "excluded_inbounds"]
 
     model_config = {
         "populate_by_name": True,
@@ -63,7 +69,7 @@ class UserCreate(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of UserCreate from a JSON string"""
+        """Create an instance of UserResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -123,7 +129,7 @@ class UserCreate(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of UserCreate from a dict"""
+        """Create an instance of UserResponse from a dict"""
         if obj is None:
             return None
 
@@ -143,7 +149,13 @@ class UserCreate(BaseModel):
             "on_hold_expire_duration": obj.get("on_hold_expire_duration"),
             "on_hold_timeout": obj.get("on_hold_timeout"),
             "username": obj.get("username"),
-            "status": obj.get("status")
+            "status": obj.get("status"),
+            "used_traffic": obj.get("used_traffic"),
+            "lifetime_used_traffic": obj.get("lifetime_used_traffic") if obj.get("lifetime_used_traffic") is not None else 0,
+            "created_at": obj.get("created_at"),
+            "links": obj.get("links"),
+            "subscription_url": obj.get("subscription_url") if obj.get("subscription_url") is not None else '',
+            "excluded_inbounds": obj.get("excluded_inbounds")
         })
         return _obj
 

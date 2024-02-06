@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.port import Port
+from marzban_api.models.port import Port
 
 class TestPort(unittest.TestCase):
     """Port unit test stubs"""

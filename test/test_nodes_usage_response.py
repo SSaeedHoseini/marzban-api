@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.nodes_usage_response import NodesUsageResponse
+from marzban_api.models.nodes_usage_response import NodesUsageResponse
 
 class TestNodesUsageResponse(unittest.TestCase):
     """NodesUsageResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestNodesUsageResponse(unittest.TestCase):
         if include_optional:
             return NodesUsageResponse(
                 usages = [
-                    marzban-api.models.node_usage_response.NodeUsageResponse(
+                    marzban_api.models.node_usage_response.NodeUsageResponse(
                         node_id = 56, 
                         node_name = '', 
                         uplink = 56, 
@@ -46,7 +46,7 @@ class TestNodesUsageResponse(unittest.TestCase):
         else:
             return NodesUsageResponse(
                 usages = [
-                    marzban-api.models.node_usage_response.NodeUsageResponse(
+                    marzban_api.models.node_usage_response.NodeUsageResponse(
                         node_id = 56, 
                         node_name = '', 
                         uplink = 56, 

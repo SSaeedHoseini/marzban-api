@@ -14,7 +14,7 @@
 
 import unittest
 
-from marzban-api.models.node_status import NodeStatus
+from marzban_api.models.node_status import NodeStatus
 
 class TestNodeStatus(unittest.TestCase):
     """NodeStatus unit test stubs"""

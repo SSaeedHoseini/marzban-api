@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.validation_error import ValidationError
+from marzban_api.models.validation_error import ValidationError
 
 # TODO update the JSON string below
 json = "{}"

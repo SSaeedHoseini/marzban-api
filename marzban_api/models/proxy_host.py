@@ -17,18 +17,29 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel
+from pydantic import BaseModel, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from marzban-api.models.validation_error import ValidationError
+from marzban_api.models.proxy_host_alpn import ProxyHostALPN
+from marzban_api.models.proxy_host_fingerprint import ProxyHostFingerprint
+from marzban_api.models.proxy_host_security import ProxyHostSecurity
 from typing import Optional, Set
 from typing_extensions import Self
 
-class HTTPValidationError(BaseModel):
+class ProxyHost(BaseModel):
     """
-    HTTPValidationError
+    ProxyHost
     """ # noqa: E501
-    detail: Optional[List[ValidationError]] = None
-    __properties: ClassVar[List[str]] = ["detail"]
+    remark: StrictStr
+    address: StrictStr
+    port: Optional[StrictInt] = None
+    sni: Optional[StrictStr] = None
+    host: Optional[StrictStr] = None
+    security: Optional[ProxyHostSecurity] = None
+    alpn: Optional[ProxyHostALPN] = None
+    fingerprint: Optional[ProxyHostFingerprint] = None
+    allowinsecure: Optional[StrictBool] = None
+    is_disabled: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["remark", "address", "port", "sni", "host", "security", "alpn", "fingerprint", "allowinsecure", "is_disabled"]
 
     model_config = {
         "populate_by_name": True,
@@ -48,7 +59,7 @@ class HTTPValidationError(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of HTTPValidationError from a JSON string"""
+        """Create an instance of ProxyHost from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,18 +80,26 @@ class HTTPValidationError(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in detail (list)
-        _items = []
-        if self.detail:
-            for _item in self.detail:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['detail'] = _items
+        # set to None if port (nullable) is None
+        # and model_fields_set contains the field
+        if self.port is None and "port" in self.model_fields_set:
+            _dict['port'] = None
+
+        # set to None if sni (nullable) is None
+        # and model_fields_set contains the field
+        if self.sni is None and "sni" in self.model_fields_set:
+            _dict['sni'] = None
+
+        # set to None if host (nullable) is None
+        # and model_fields_set contains the field
+        if self.host is None and "host" in self.model_fields_set:
+            _dict['host'] = None
+
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of HTTPValidationError from a dict"""
+        """Create an instance of ProxyHost from a dict"""
         if obj is None:
             return None
 
@@ -88,7 +107,16 @@ class HTTPValidationError(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "detail": [ValidationError.from_dict(_item) for _item in obj["detail"]] if obj.get("detail") is not None else None
+            "remark": obj.get("remark"),
+            "address": obj.get("address"),
+            "port": obj.get("port"),
+            "sni": obj.get("sni"),
+            "host": obj.get("host"),
+            "security": obj.get("security"),
+            "alpn": obj.get("alpn"),
+            "fingerprint": obj.get("fingerprint"),
+            "allowinsecure": obj.get("allowinsecure"),
+            "is_disabled": obj.get("is_disabled")
         })
         return _obj
 

@@ -45,5 +45,5 @@ setup(
     long_description="""\
     Unified GUI Censorship Resistant Solution Powered by Xray
     """,  # noqa: E501
-    package_data={"marzban-api": ["py.typed"]},
+    package_data={"marzban_api": ["py.typed"]},
 )

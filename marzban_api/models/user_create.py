@@ -21,14 +21,14 @@ from datetime import datetime
 from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from marzban-api.models.user_data_limit_reset_strategy import UserDataLimitResetStrategy
-from marzban-api.models.user_status_modify import UserStatusModify
+from marzban_api.models.user_data_limit_reset_strategy import UserDataLimitResetStrategy
+from marzban_api.models.user_status_create import UserStatusCreate
 from typing import Optional, Set
 from typing_extensions import Self
 
-class UserModify(BaseModel):
+class UserCreate(BaseModel):
     """
-    UserModify
+    UserCreate
     """ # noqa: E501
     proxies: Optional[Dict[str, Dict[str, Any]]] = None
     expire: Optional[StrictInt] = None
@@ -41,8 +41,9 @@ class UserModify(BaseModel):
     online_at: Optional[datetime] = None
     on_hold_expire_duration: Optional[StrictInt] = None
     on_hold_timeout: Optional[datetime] = None
-    status: Optional[UserStatusModify] = None
-    __properties: ClassVar[List[str]] = ["proxies", "expire", "data_limit", "data_limit_reset_strategy", "inbounds", "note", "sub_updated_at", "sub_last_user_agent", "online_at", "on_hold_expire_duration", "on_hold_timeout", "status"]
+    username: StrictStr
+    status: Optional[UserStatusCreate] = None
+    __properties: ClassVar[List[str]] = ["proxies", "expire", "data_limit", "data_limit_reset_strategy", "inbounds", "note", "sub_updated_at", "sub_last_user_agent", "online_at", "on_hold_expire_duration", "on_hold_timeout", "username", "status"]
 
     model_config = {
         "populate_by_name": True,
@@ -62,7 +63,7 @@ class UserModify(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of UserModify from a JSON string"""
+        """Create an instance of UserCreate from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -122,7 +123,7 @@ class UserModify(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of UserModify from a dict"""
+        """Create an instance of UserCreate from a dict"""
         if obj is None:
             return None
 
@@ -141,6 +142,7 @@ class UserModify(BaseModel):
             "online_at": obj.get("online_at"),
             "on_hold_expire_duration": obj.get("on_hold_expire_duration"),
             "on_hold_timeout": obj.get("on_hold_timeout"),
+            "username": obj.get("username"),
             "status": obj.get("status")
         })
         return _obj

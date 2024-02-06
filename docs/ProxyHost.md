@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from marzban-api.models.proxy_host import ProxyHost
+from marzban_api.models.proxy_host import ProxyHost
 
 # TODO update the JSON string below
 json = "{}"
